@@ -1,6 +1,6 @@
-let a = 0;
-let arr = ["you", "grandma", "pets", "aliens", "kids", "pigs", "elephants", "cats", "dogs", "flowers", "trees", "monkies", "cars", "and much more..."]
-let cont = document.getElementById('effect');
+var a = 0;
+const arr = ["you", "grandma", "pets", "aliens", "kids", "pigs", "elephants", "cats", "dogs", "flowers", "trees", "monkies", "cars", "and much more..."]
+const cont = document.getElementById('effect');
 const animate = () => {
 
     if (a < arr.length) {
