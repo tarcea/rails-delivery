@@ -1,7 +1,7 @@
 var a = 0;
-const arr = ["you", "grandma", "pets", "aliens", "kids", "pigs", "elephants", "cats", "dogs", "flowers", "trees", "monkies", "cars", "and much more..."]
-const cont = document.getElementById('effect');
-const animate = () => {
+var arr = ["you", "grandma", "pets", "aliens", "kids", "pigs", "elephants", "cats", "dogs", "flowers", "trees", "monkies", "cars", "and much more..."]
+var cont = document.getElementById('effect');
+var animate = () => {
 
     if (a < arr.length) {
       // cont.innerHTML = textEffect.charAt(a);
