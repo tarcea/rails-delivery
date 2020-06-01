@@ -6,7 +6,8 @@ gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
-gem 'rails', '5.2.4.2'
+# gem 'rails', '5.2.4.2'
+
 gem 'redis'
 
 gem 'autoprefixer-rails'
@@ -15,7 +16,10 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-
+# update rails 6
+gem 'rails', '~> 6.0'
+gem 'sass-rails', '~> 6.0'
+gem 'railties', '~> 6.0', '>= 6.0.3.1'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
