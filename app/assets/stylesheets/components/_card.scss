@@ -8,6 +8,7 @@
   // text-align: center;
   justify-content: center;
   p {
+    // position: relative;
     font-family: 'Montserrat', sans-serif;
     font-size: 19px;
     font-weight: 100;
@@ -25,6 +26,14 @@
   margin: 16px;
 }
 
+span {
+  position: absolute;
+  transform: translate(-50%, 50%);
+}
+
+#effect {
+  // transform: translate(300%);
+}
 
 // @media (max-width: 960px) {
 //   /* For a screen < 960px, this CSS will be read */
