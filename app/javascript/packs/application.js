@@ -5,3 +5,6 @@ import "bootstrap";
 
 // });
 // document.addEventListener("touchstart", function(){}, true);
+// console.log("Hello from app/javascript/packs/application.js!");
+import { animate } from '../animate';
+animate();
