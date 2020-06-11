@@ -8,3 +8,6 @@ import "bootstrap";
 // console.log("Hello from app/javascript/packs/application.js!");
 import { animate } from '../animate';
 animate();
+// setInterval(() => {
+//   animate();
+// }, 1000);

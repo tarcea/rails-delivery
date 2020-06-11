@@ -1,5 +1,7 @@
 let a = 0;
-const arr = ["you", "grandma", "pets", "aliens", "kids", "pigs", "elephants", "cats", "dogs", "flowers", "trees", "monkies", "cars", "and much more..."]
+const arr = ["you", "grandma", "pets", "aliens", "kids", "pigs",
+            "elephants", "cats", "dogs", "flowers", "trees", "monkies",
+            "cars", "cows", "wine", "beer", "and much more..."]
 // var textEffect = "hello and good luck"
 const cont = document.getElementById('effect');
 const animate = () => {
