@@ -145,3 +145,15 @@ span {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.contact {
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: grey;
+  }
+
+  font-size: 36px;
+}
