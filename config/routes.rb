@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :projects
 
   get "/contact" => "pages#contact"
+  get "/resources" => "pages#resources"
+  get "/beta" => "pages#beta"
 end
