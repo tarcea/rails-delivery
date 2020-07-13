@@ -9,7 +9,7 @@ gem 'puma'
 # gem 'rails', '5.2.4.2'
 gem 'octicons_helper'
 gem 'redis'
-
+gem 'bootstrap', '~> 4.5'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'
