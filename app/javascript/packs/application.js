@@ -26,9 +26,9 @@ import "bootstrap";
 import Typewriter from 'typewriter-effect/dist/core';
 
 new Typewriter('#effect', {
-  strings: ["you", "grandma", "pets", "aliens", "kids", "pigs",
-            "elephants", "cats", "dogs", "flowers", "trees", "monkies",
-            "cars", "cows", "wine", "beer"],
+  strings: ["Ruby on Rails", "PostgreSQL", "Java script", "React", "Heroku", "Bootstrap",
+            "HTML", "CSS", "Git", "Github", "Slack", "Trello",
+            "Figma"],
   autoStart: true,
   loop: true,
 });
