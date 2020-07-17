@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Start creating Resources"
+puts "....."
+puts "........"
+puts "............"
+puts "..............."
+puts "................."
+puts "..................."
+puts "......................"
+Resource.create(url: "https://ruby-doc.org/", description: "Ruby-Doc", discipline: "Ruby")
+puts ".........................."
+puts "DONE"
