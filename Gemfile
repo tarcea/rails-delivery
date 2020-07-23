@@ -16,6 +16,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'link_thumbnailer', '~> 3.3', '>= 3.3.2'
 # update rails 6
 gem 'rails', '~> 6.0'
 gem 'sass-rails', '~> 6.0'

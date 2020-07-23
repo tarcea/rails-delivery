@@ -32,3 +32,5 @@ new Typewriter('#effect', {
   autoStart: true,
   loop: true,
 });
+
+

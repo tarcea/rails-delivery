@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 const Hello = props => (
-  <small><div class="text-center">&copy; Copyright 2020 {props.name} </div></small>
+  <small><div className="text-center">&copy; Copyright 2020 {props.name} </div></small>
 )
 
 Hello.defaultProps = {

@@ -1,5 +1,18 @@
 <!-- <div class="container"> -->
 <% @resources.each do |resource| %>
+<% obj = LinkThumbnailer.generate(resource.url) %>
+<% obj.images.each do |image| %>
+<% unless image.nil? %>
+images: <img src="<%= image.src.to_s %>" alt="">  <br>
+<% end %>
+<% end %>
+title: <%= obj.title %> <br>
+favicon: <img src="<%= obj.url + obj.favicon %>" alt="">  <br>
+description: <%= obj.description %> <br>
+<% end %>
+
+
+<% @resources.each do |resource| %>
   <%= resource.discipline %>
   <% end %>
 

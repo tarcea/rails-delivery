@@ -17,13 +17,13 @@
   <body>
   <div class="container">
     <!-- <%= render 'shared/navbar_hover' %> -->
-    <%= render 'shared/navbar_bootstrap' %>
+    <%= render 'shared/navbar_bootstrap' unless current_page?(root_path) %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
 
     <%= javascript_pack_tag 'application' %>
-    <%= render 'shared/footer' %>
+    <%= render 'shared/footer' unless current_page?(root_path) %>
 </div>
   </body>
 </html>

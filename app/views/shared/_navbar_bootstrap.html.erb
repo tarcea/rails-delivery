@@ -1,13 +1,13 @@
 <!-- <div class="container"> -->
   <% if user_signed_in? && current_user.email == "contact@gheorghetarcea.com" %>
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <%= link_to current_user.email, root_path, class: "navbar-brand" %>
+  <%= link_to current_user.email, home_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active"><%= link_to "Home", root_path, class: "nav-link" %><span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active"><%= link_to "Home", home_path, class: "nav-link" %><span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link"><%= link_to "Projects", projects_path, class: "nav-link" %></a>
       <a class="nav-item nav-link"><%= link_to "Resources", resources_path, class: "nav-link" %></a>
       <a class="nav-item nav-link"><%= link_to "Beta", beta_path, class: "nav-link" %></a>
@@ -19,13 +19,13 @@
 </nav>
   <% else %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <%= link_to "Gheorghe Tarcea", root_path, class: "navbar-brand" %>
+  <%= link_to "Gheorghe Tarcea", home_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active"><%= link_to "Home", root_path, class: "nav-link" %><span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active"><%= link_to "Home", home_path, class: "nav-link" %><span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link"><%= link_to "Projects", projects_path, class: "nav-link" %></a>
       <a class="nav-item nav-link"><%= link_to "Resources", resources_path, class: "nav-link" %></a>
       <a class="nav-item nav-link"><%= link_to "Beta", beta_path, class: "nav-link" %></a>
