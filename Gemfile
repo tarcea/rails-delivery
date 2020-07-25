@@ -21,6 +21,7 @@ gem 'link_thumbnailer', '~> 3.3', '>= 3.3.2'
 gem 'rails', '~> 6.0'
 gem 'sass-rails', '~> 6.0'
 gem 'railties', '~> 6.0', '>= 6.0.3.1'
+gem "rails-uikit"
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
