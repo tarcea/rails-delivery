@@ -25,9 +25,6 @@ body.landing {
 
 }
 
-.main-text {
-
-}
 
 .big {
   font-size: 100px;
@@ -43,4 +40,12 @@ body.landing {
 
 .skills {
   padding: 16px;
+}
+
+.main-text {
+  mark {
+    background: linear-gradient(0deg, #ecce6d 1%, transparent 45%);
+    // background-color: #ecce6d;
+  }
+
 }
