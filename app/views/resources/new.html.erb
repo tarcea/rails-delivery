@@ -1,0 +1,12 @@
+<% if user_signed_in? && current_user.email == "contact@gheorghetarcea.com" %>
+<div class="container">
+  <div class="border-top">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <%= render 'form', resource: @resource %>
+        <%= link_to 'Back', resources_path, class: 'btn' %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

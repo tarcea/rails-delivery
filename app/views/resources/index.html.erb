@@ -1,26 +1,47 @@
-<!-- <div class="container"> -->
-  <!--
+<body class="landing">
+<div class="card-white text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1518933165971-611dbc9c412d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80); background-size: cover;">
+      <h1>Resources</h1>
+</div>
+<div class="row d-flex flex-column justify-content-center">
+  <div class="container justify-content-center col-12">
+    <div class="row">
+      <% @resources.each do |resource| %>
+        <% obj = LinkThumbnailer.generate(resource.url) %>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= obj.title %></h5>
+            <img src="<%= obj.url + obj.favicon %>">
+            <p class="card-text"><%= obj.description %></p>
+            <%= link_to 'Go there', resource.url, class: 'btn', target: 'new' %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!--
 <% @resources.each do |resource| %>
 <% obj = LinkThumbnailer.generate(resource.url) %>
+
 <% obj.images.each do |image| %>
 <% unless image.nil? %>
 images: <img src="<%= image.src.to_s %>" alt="">  <br>
 <% end %>
 <% end %>
+
 title: <%= obj.title %> <br>
 favicon: <img src="<%= obj.url + obj.favicon %>" alt="">  <br>
 description: <%= obj.description %> <br>
+discipline: <%= resource.discipline %> <br>
 <% end %>
-
-
-<% @resources.each do |resource| %>
-  <%= resource.discipline %>
-  <% end %>
 -->
-    <div class="card-white text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1518933165971-611dbc9c412d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80); background-size: cover;">
-      <h1>Resources</h1>
-    </div>
 
+
+
+<!--
     <div class="card-white text-center" style="position: relative;">
       <div class="d-flex justify-content-around">
         <%= octicon "alert", :height => 99 %>
@@ -76,8 +97,8 @@ description: <%= obj.description %> <br>
        <i class="devicon-git-plain"></i>
     </div>
 
-<!-- </div> -->
 
 
+-->
 
-
+</body>
