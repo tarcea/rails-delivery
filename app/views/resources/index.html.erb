@@ -13,15 +13,17 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><%= obj.title %></h5>
-            <div class="ics">
-            <%= link_to (octicon "x", :height => 24), resource_path(resource), method: :delete, data: { confirm: 'Are you sure?', class: "delete-button" } %>
-            </div>
             <% src = obj.url + obj.favicon %>
             <img src="<%= src %>", height="80", width="80", alt="">
             <p class="card-text"><%= resource.description %></p>
             <p class="card-text"><%= obj.description %></p>
             <%= link_to 'Go there', resource.url, class: 'btn', target: 'new' %>
+            <% if user_signed_in? && current_user.email == "contact@gheorghetarcea.com" %>
+            <div class="ics">
+            <%= link_to (octicon "x", :height => 24), resource_path(resource), method: :delete, data: { confirm: 'Are you sure?', class: "delete-button" } %>
+            </div>
             <%= link_to 'Edit', edit_resource_path(resource), class: 'btn' %>
+            <% end %>
             <p class="discipline"><%= resource.discipline %></p>
           </div>
         </div>
