@@ -4,7 +4,9 @@ class ResourcesController < ApplicationController
   end
 
   def new
-    @resource = Resource.new
+    #if user_signed_in? && current_user.email == "contact@gheorghetarcea.com"
+      @resource = Resource.new
+    #end
   end
 
   def show
@@ -19,6 +21,10 @@ class ResourcesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def discipline
+    discipline = ['ruby', 'rails', 'mongo']
   end
 
   private
