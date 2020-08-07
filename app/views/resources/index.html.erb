@@ -12,8 +12,8 @@
     <div class="row">
       <% @resources.each do |resource| %>
         <% obj = LinkThumbnailer.generate(resource.url) %>
-      <div class="col-sm-6">
-        <div class="card">
+      <div class="col-sm-6 margin-box">
+        <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title"><%= obj.title %></h5>
             <% src = obj.url + obj.favicon %>
