@@ -1,6 +1,8 @@
 <%= simple_form_for @resource do |f| %>
-  <%= f.input :url %>
-  <!-- <%= f.input :description %> -->
+  <!-- <%= f.input :url %> -->
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <!-- <%= f.input :avatar %> -->
   <%= f.select :discipline, ["Ruby on Rails", "PostgreSQL", "Mongo DB", "Java script", "NodeJS", "React", "Heroku", "Bootstrap",
             "HTML", "CSS", "Git", "Github", "Slack", "Trello",
             "Figma", "General Topic", "Q & A"], class: 'form-control' %>

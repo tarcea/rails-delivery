@@ -2,7 +2,6 @@
 <div class="card-white text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1518933165971-611dbc9c412d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80); background-size: cover;">
       <h1>Resources</h1>
 </div>
-
 <div class="landing">
 <div class="row d-flex flex-column justify-content-center">
   <div class="container justify-content-center col-12">
@@ -11,15 +10,13 @@
     <% end %>
     <div class="row">
       <% @resources.each do |resource| %>
-        <% obj = LinkThumbnailer.generate(resource.url) %>
       <div class="col-sm-6 margin-box">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title"><%= obj.title %></h5>
-            <% src = obj.url + obj.favicon %>
-            <img src="<%= src %>", height="80", width="80", alt="">
+            <h5 class="card-title"><%= resource.title %></h5>
+            <img src="<%= resource.url + resource.avatar %>", height="80", width="80", alt="">
+            <!-- <p class="card-text"><%= resource.description %></p> -->
             <p class="card-text"><%= resource.description %></p>
-            <p class="card-text"><%= obj.description %></p>
             <%= link_to 'Go there', resource.url, class: 'btn', target: 'new' %>
             <% if user_signed_in? && current_user.email == "contact@gheorghetarcea.com" %>
             <div class="ics">

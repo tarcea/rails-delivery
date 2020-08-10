@@ -2,7 +2,7 @@
 <% obj = LinkThumbnailer.generate(@resource.url) %>
 title: <%= obj.title %> <br>
 favicon: <img src="<%= obj.url + obj.favicon %>" alt="">  <br>
-description: <%= obj.description %> <br>
+description: <%= @resource.description = obj.description %> <br>
 <!--
 json: <%= obj.to_json %>
 -->

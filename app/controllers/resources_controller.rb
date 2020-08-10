@@ -1,6 +1,14 @@
 class ResourcesController < ApplicationController
+
+  def fetchMe(url)
+    jsonData = LinkThumbnailer.generate(url).to_json
+    hashData = JSON.parse(jsonData)
+    finalData = {url: hashData['url'], description: hashData['description'], title: hashData['title'], avatar: hashData['favicon']}
+  end
+
   def index
     @resources = Resource.all
+    # @data = fetchMe('https://stackoverflow.com/questions')
   end
 
   def new
@@ -15,7 +23,9 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    @resource = Resource.new(resource_params)
+    data = fetchMe(params[:resource]["url"])
+    data[:discipline] = params[:resource]["discipline"]
+    @resource = Resource.new(data)
     if @resource.save
       redirect_to resources_path, notice: 'created OK'
     else
@@ -42,6 +52,6 @@ class ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:url, :description, :discipline)
+    params.require(:resource).permit(:url, :title, :description, :discipline, :avatar)
   end
 end
