@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2020_08_10_111617) do
     t.string "discipline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "title"
-    t.string "avatar"
+    t.text "title"
+    t.text "avatar"
   end
 
   create_table "users", force: :cascade do |t|

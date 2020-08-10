@@ -3,7 +3,12 @@ class ResourcesController < ApplicationController
   def fetchMe(url)
     jsonData = LinkThumbnailer.generate(url).to_json
     hashData = JSON.parse(jsonData)
-    finalData = {url: hashData['url'], description: hashData['description'], title: hashData['title'], avatar: hashData['favicon']}
+    if hashData['favicon'].match(/^http?(.*)/)
+      avatar = hashData['favicon']
+    else
+    avatar = hashData['url'] + hashData['favicon']
+  end
+    finalData = {url: hashData['url'], description: hashData['description'], title: hashData['title'], avatar: avatar}
   end
 
   def index

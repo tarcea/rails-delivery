@@ -14,15 +14,15 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title"><%= resource.title %></h5>
-            <img src="<%= resource.url + resource.avatar %>", height="80", width="80", alt="">
+            <img src="<%= resource.avatar %>", height="80", width="80", alt="">
             <!-- <p class="card-text"><%= resource.description %></p> -->
             <p class="card-text"><%= resource.description %></p>
-            <%= link_to 'Go there', resource.url, class: 'btn', target: 'new' %>
+            <%= link_to 'Go there', resource.url, class: 'btn float-go', target: 'new' %>
             <% if user_signed_in? && current_user.email == "contact@gheorghetarcea.com" %>
             <div class="ics">
             <%= link_to (octicon "x", :height => 24), resource_path(resource), method: :delete, data: { confirm: 'Are you sure?', class: "delete-button" } %>
             </div>
-            <%= link_to 'Edit', edit_resource_path(resource), class: 'btn' %>
+            <%= link_to 'Edit', edit_resource_path(resource), class: 'btn float-edit' %>
             <% end %>
             <p class="discipline"><%= resource.discipline %></p>
           </div>
