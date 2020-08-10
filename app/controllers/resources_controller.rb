@@ -6,7 +6,7 @@ class ResourcesController < ApplicationController
     if hashData['favicon'].match(/^http?(.*)/)
       avatar = hashData['favicon']
     else
-    avatar = hashData['url'] + hashData['favicon']
+    avatar = url + hashData['favicon']
   end
     finalData = {url: hashData['url'], description: hashData['description'], title: hashData['title'], avatar: avatar}
   end
