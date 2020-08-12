@@ -25,6 +25,8 @@ import "bootstrap";
 // }, 1000);
 import Typewriter from 'typewriter-effect/dist/core';
 
+// const images = require.context('.../images', true);
+
 new Typewriter('#effect', {
   strings: ["Ruby on Rails", "PostgreSQL", "Java script", "React", "Heroku", "Bootstrap",
             "HTML", "CSS", "Git", "Github", "Slack", "Trello",
