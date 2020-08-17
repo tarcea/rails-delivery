@@ -9,7 +9,7 @@
     <%= link_to "Add resource", new_resource_path, class: "btn btn-block" %>
     <% end %>
     <div class="row">
-      <% @resources.each do |resource| %>
+      <% @resources.reverse.each do |resource| %>
       <div class="col-sm-6 margin-box">
         <div class="card h-100">
           <div class="card-body">
